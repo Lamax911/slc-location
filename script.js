@@ -1,10 +1,10 @@
 /* ============================================
-   SLC LOCATION — JAVASCRIPT
+   SLC LOCATION â€” JAVASCRIPT
    ============================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // Active les animations uniquement si JS tourne (évite le contenu invisible en local)
+  // Active les animations uniquement si JS tourne (Ã©vite le contenu invisible en local)
   document.body.classList.add('js-ready');
 
   /* ---- NAVBAR: scroll effect ---- */
@@ -39,16 +39,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (hamburger && mobileMenu) {
     hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('active');
-      mobileMenu.classList.toggle('open');
-      document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+      const isOpen = mobileMenu.classList.toggle('open');
+      hamburger.classList.toggle('active', isOpen);
+      hamburger.setAttribute('aria-expanded', isOpen);
+      document.body.style.overflow = isOpen ? 'hidden' : '';
     });
 
-    // Close on link click
     mobileMenu.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
         mobileMenu.classList.remove('open');
+        hamburger.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
         document.body.style.overflow = '';
       });
     });
@@ -85,11 +86,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     allRevealEls.forEach(el => revealObserver.observe(el));
   } else {
-    // Fallback : pas d'IntersectionObserver → tout afficher
+    // Fallback : pas d'IntersectionObserver â†’ tout afficher
     allRevealEls.forEach(el => el.classList.add('visible'));
   }
 
-  // Failsafe : après 800ms, tout ce qui n'est pas encore visible devient visible
+  // Failsafe : aprÃ¨s 800ms, tout ce qui n'est pas encore visible devient visible
   setTimeout(() => {
     allRevealEls.forEach(el => {
       if (!el.classList.contains('visible')) {
@@ -106,30 +107,30 @@ document.addEventListener('DOMContentLoaded', () => {
     'mini-pelle': {
       title: 'Mini-Pelle',
       image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
-      description: 'La mini-pelle idéale pour tous vos travaux de terrassement, même dans les espaces les plus restreints. Compacte et maniable, elle s'adapte à une grande variété de chantiers : jardins, tranchées, fondations, démolition légère, etc.',
-      specs: ['Godet de creusage 20cm', 'Godet de creusage 40cm', 'Godet de curage 100cm', 'Faible encombrement', 'Idéale espaces restreints'],
-      placeholder: '📋 Informations techniques complémentaires à venir (poids, portée, etc.)'
+      description: 'La mini-pelle idÃ©ale pour tous vos travaux de terrassement, mÃªme dans les espaces les plus restreints. Compacte et maniable, elle s'adapte Ã  une grande variÃ©tÃ© de chantiers : jardins, tranchÃ©es, fondations, dÃ©molition lÃ©gÃ¨re, etc.',
+      specs: ['Godet de creusage 20cm', 'Godet de creusage 40cm', 'Godet de curage 100cm', 'Faible encombrement', 'IdÃ©ale espaces restreints'],
+      placeholder: 'ðŸ“‹ Informations techniques complÃ©mentaires Ã  venir (poids, portÃ©e, etc.)'
     },
     'nacelle-stabilisateur': {
       title: 'Nacelle avec Stabilisateur',
       image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80',
-      description: 'La nacelle avec stabilisateur garantit une stabilité maximale et une sécurité optimale pour tous vos travaux en hauteur. Parfaitement adaptée aux chantiers exigeant précision et sécurité.',
-      specs: ['Stabilisateurs déployables', 'Sécurité maximale', 'Travaux en hauteur', 'Plateforme stable'],
-      placeholder: '📋 Informations techniques complémentaires à venir (hauteur max, charge utile, etc.)'
+      description: 'La nacelle avec stabilisateur garantit une stabilitÃ© maximale et une sÃ©curitÃ© optimale pour tous vos travaux en hauteur. Parfaitement adaptÃ©e aux chantiers exigeant prÃ©cision et sÃ©curitÃ©.',
+      specs: ['Stabilisateurs dÃ©ployables', 'SÃ©curitÃ© maximale', 'Travaux en hauteur', 'Plateforme stable'],
+      placeholder: 'ðŸ“‹ Informations techniques complÃ©mentaires Ã  venir (hauteur max, charge utile, etc.)'
     },
     'citroen-jumpy': {
-      title: 'Citroën Jumpy 9 Places',
+      title: 'CitroÃ«n Jumpy 9 Places',
       image: 'https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=800&q=80',
-      description: 'Parfait pour vos déplacements professionnels ou voyages en groupe, le Jumpy 9 places allie confort et praticité. Idéal pour transporter votre équipe sur les chantiers avec facilité.',
-      specs: ['9 places assises', 'Forfait 500 km inclus', 'Km supplémentaires possibles', 'Climatisation', 'Confort voyage'],
-      placeholder: '📋 Informations complémentaires à venir (options, caution, conditions, etc.)'
+      description: 'Parfait pour vos dÃ©placements professionnels ou voyages en groupe, le Jumpy 9 places allie confort et praticitÃ©. IdÃ©al pour transporter votre Ã©quipe sur les chantiers avec facilitÃ©.',
+      specs: ['9 places assises', 'Forfait 500 km inclus', 'Km supplÃ©mentaires possibles', 'Climatisation', 'Confort voyage'],
+      placeholder: 'ðŸ“‹ Informations complÃ©mentaires Ã  venir (options, caution, conditions, etc.)'
     },
     'nacelle': {
       title: 'Nacelle',
       image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80',
-      description: 'Accédez facilement à vos zones de travail élevées grâce à notre nacelle performante. Polyvalente et puissante, elle convient à de nombreux types d'interventions en hauteur.',
-      specs: ['Haute performance', 'Polyvalente', 'Forfait 500 km inclus', 'Km supplémentaires possibles'],
-      placeholder: '📋 Informations techniques complémentaires à venir (hauteur, capacité, etc.)'
+      description: 'AccÃ©dez facilement Ã  vos zones de travail Ã©levÃ©es grÃ¢ce Ã  notre nacelle performante. Polyvalente et puissante, elle convient Ã  de nombreux types d'interventions en hauteur.',
+      specs: ['Haute performance', 'Polyvalente', 'Forfait 500 km inclus', 'Km supplÃ©mentaires possibles'],
+      placeholder: 'ðŸ“‹ Informations techniques complÃ©mentaires Ã  venir (hauteur, capacitÃ©, etc.)'
     }
   };
 
@@ -217,7 +218,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const originalHTML = submitBtn.innerHTML;
 
       // Loading state
-      submitBtn.innerHTML = '<span>⏳</span> Envoi en cours...';
+      submitBtn.innerHTML = '<span>â³</span> Envoi en cours...';
       submitBtn.disabled = true;
       submitBtn.style.opacity = '0.7';
 
@@ -232,7 +233,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (response.ok) {
           // Success
           contactForm.reset();
-          submitBtn.innerHTML = '<span>✓</span> Envoyé !';
+          submitBtn.innerHTML = '<span>âœ“</span> EnvoyÃ© !';
           submitBtn.style.background = '#2d6a2d';
           submitBtn.style.borderColor = '#2d6a2d';
           submitBtn.style.color = 'white';
@@ -242,11 +243,11 @@ document.addEventListener('DOMContentLoaded', () => {
             successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
           }
         } else {
-          throw new Error('Erreur réseau');
+          throw new Error('Erreur rÃ©seau');
         }
       } catch (err) {
         // Error state
-        submitBtn.innerHTML = '⚠️ Erreur. Réessayez.';
+        submitBtn.innerHTML = 'âš ï¸ Erreur. RÃ©essayez.';
         submitBtn.style.background = '#6a1a1a';
         submitBtn.style.borderColor = '#6a1a1a';
         submitBtn.style.color = 'white';

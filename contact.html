@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Contact &amp; Devis — SLC Location | Matériel Chantier Savigny-Le-Temple</title>
+  <meta name="description" content="Contactez SLC Location pour un devis rapide de location de nacelles, mini-pelles, véhicules utilitaires. Réponse sous 24h. Savigny-Le-Temple, Île-de-France." />
+  <meta name="keywords" content="contact SLC Location, devis location matériel chantier, location nacelle Seine-et-Marne, devis mini-pelle" />
+  <meta name="author" content="SLC Location" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Contact — SLC Location" />
+  <meta property="og:description" content="Demandez votre devis en ligne. Réponse rapide garantie." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_FR" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Barlow+Condensed:wght@700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://slclocation.fr/contact.html" />
+</head>
+<body>
+
+  <!-- =============================================
+       NAVIGATION
+       ============================================= -->
+  <nav class="navbar scrolled" role="navigation" aria-label="Navigation principale">
+    <a href="index.html" class="navbar__logo" aria-label="SLC Location - Retour accueil">
+      <div class="navbar__logo-icon" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+          <polyline points="9 22 9 12 15 12 15 22"/>
+        </svg>
+      </div>
+      <span>SLC <span>Location</span></span>
+    </a>
+
+    <!-- Desktop Menu -->
+    <ul class="navbar__menu" role="list">
+      <li><a href="index.html#accueil">Accueil</a></li>
+      <li><a href="index.html#apropos">À propos</a></li>
+      <li><a href="index.html#equipements">Nos équipements</a></li>
+      <li><a href="index.html#fonctionnement">Fonctionnement</a></li>
+      <li><a href="index.html#avis">Avis clients</a></li>
+      <li><a href="contact.html" style="color:var(--yellow)">Contact</a></li>
+      <li><a href="contact.html" class="btn-devis">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <polyline points="14 2 14 8 20 8"/>
+        </svg>
+        Demander un devis
+      </a></li>
+    </ul>
+
+    <!-- Hamburger -->
+    <button class="navbar__hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="navbar__mobile" role="navigation" aria-label="Menu mobile">
+    <a href="index.html#accueil">Accueil</a>
+    <a href="index.html#apropos">À propos</a>
+    <a href="index.html#equipements">Nos équipements</a>
+    <a href="index.html#fonctionnement">Fonctionnement</a>
+    <a href="index.html#avis">Avis clients</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="btn-devis">Demander un devis</a>
+  </div>
+
+  <!-- =============================================
+       HERO CONTACT
+       ============================================= -->
+  <header class="contact-hero" aria-labelledby="contact-hero-title">
+    <div class="container" style="position:relative;z-index:1">
+      <div class="section-header">
+        <div class="section-tag">Nous contacter</div>
+        <h1 class="section-title" id="contact-hero-title">Contactez<br /><span>SLC Location</span></h1>
+        <p class="section-subtitle">Remplissez le formulaire ci-dessous ou appelez-nous directement. Nous vous répondons dans les plus brefs délais.</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- =============================================
+       SECTION CONTACT
+       ============================================= -->
+  <main class="contact-section" id="main-content">
+    <div class="container">
+      <div class="contact__grid">
+
+        <!-- ---- FORMULAIRE ---- -->
+        <div class="reveal">
+          <div class="contact-form">
+            <h2 class="form-title">Votre demande</h2>
+            <p class="form-subtitle">Tous les champs marqués <span style="color:var(--yellow-dark)">*</span> sont obligatoires.</p>
+
+            <!--
+              FORMSPREE : Remplacez ACTION par votre endpoint Formspree
+              Ex: https://formspree.io/f/VOTRE_ID
+            -->
+            <form
+              id="contact-form"
+              action="https://formspree.io/f/YOUR_FORM_ID"
+              method="POST"
+              novalidate
+              aria-label="Formulaire de contact SLC Location"
+            >
+              <!-- Honeypot anti-spam -->
+              <input type="text" name="_gotcha" style="display:none" aria-hidden="true" tabindex="-1" />
+
+              <!-- Prénom / Nom -->
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="prenom">Prénom <span class="required" aria-label="obligatoire">*</span></label>
+                  <input
+                    type="text"
+                    id="prenom"
+                    name="prenom"
+                    placeholder="Jean"
+                    required
+                    autocomplete="given-name"
+                    aria-required="true"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="nom">Nom <span class="required" aria-label="obligatoire">*</span></label>
+                  <input
+                    type="text"
+                    id="nom"
+                    name="nom"
+                    placeholder="Dupont"
+                    required
+                    autocomplete="family-name"
+                    aria-required="true"
+                  />
+                </div>
+              </div>
+
+              <!-- Email -->
+              <div class="form-group">
+                <label for="email">Adresse e-mail <span class="required" aria-label="obligatoire">*</span></label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="jean.dupont@exemple.fr"
+                  required
+                  autocomplete="email"
+                  aria-required="true"
+                />
+              </div>
+
+              <!-- Téléphone (optionnel) -->
+              <div class="form-group">
+                <label for="telephone">Téléphone <span style="color:var(--gray-light);font-weight:400;text-transform:none;letter-spacing:0;">(optionnel)</span></label>
+                <input
+                  type="tel"
+                  id="telephone"
+                  name="telephone"
+                  placeholder="+33 6 XX XX XX XX"
+                  autocomplete="tel"
+                />
+              </div>
+
+              <!-- Statut -->
+              <div class="form-group">
+                <label for="statut">Vous êtes <span class="required" aria-label="obligatoire">*</span></label>
+                <select id="statut" name="statut" required aria-required="true">
+                  <option value="" disabled selected>Sélectionnez votre statut</option>
+                  <option value="particulier">Particulier</option>
+                  <option value="entreprise">Entreprise</option>
+                  <option value="artisan">Artisan</option>
+                  <option value="autre">Autre</option>
+                </select>
+              </div>
+
+              <!-- Type de demande -->
+              <div class="form-group">
+                <label for="type_demande">Type de demande <span class="required" aria-label="obligatoire">*</span></label>
+                <select id="type_demande" name="type_demande" required aria-required="true">
+                  <option value="" disabled selected>Sélectionnez votre demande</option>
+                  <option value="question">Question</option>
+                  <option value="devis">Demande de devis</option>
+                </select>
+              </div>
+
+              <!-- Message -->
+              <div class="form-group">
+                <label for="message">Votre message <span class="required" aria-label="obligatoire">*</span></label>
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="La demande (soyez clair en précisant les dates, véhicule ou matériel souhaité)…"
+                  required
+                  aria-required="true"
+                  rows="5"
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn-submit">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                  <line x1="22" y1="2" x2="11" y2="13"/>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                </svg>
+                Envoyer ma demande
+              </button>
+
+            </form>
+
+            <!-- Message de succès -->
+            <div id="form-success" class="form-success" role="alert" aria-live="polite">
+              <div class="form-success__icon" aria-hidden="true">✅</div>
+              <h3>Demande envoyée !</h3>
+              <p>Votre demande a été envoyée avec succès. Nous vous recontactons dans les plus brefs délais.</p>
+            </div>
+
+          </div>
+        </div><!-- /.reveal -->
+
+        <!-- ---- INFOS CONTACT ---- -->
+        <aside aria-label="Informations de contact">
+
+          <div class="contact-info-card reveal-right">
+            <h3>Nos coordonnées</h3>
+            <p style="font-size:0.82rem;color:rgba(255,255,255,0.45);margin-bottom:0.5rem;">Contactez-nous par le moyen qui vous convient le mieux.</p>
+
+            <div class="info-divider"></div>
+
+            <!-- Téléphones -->
+            <div class="contact-info-item">
+              <div class="contact-info-icon" aria-hidden="true">📞</div>
+              <div>
+                <h4>Téléphone</h4>
+                <a href="tel:+33613391995">+33 6 13 39 19 95</a><br />
+                <a href="tel:+33601171062">+33 6 01 17 10 62</a>
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="contact-info-item">
+              <div class="contact-info-icon" aria-hidden="true">✉️</div>
+              <div>
+                <h4>Email</h4>
+                <a href="mailto:slclocation.77@gmail.com">slclocation.77@gmail.com</a>
+              </div>
+            </div>
+
+            <!-- Adresse -->
+            <div class="contact-info-item">
+              <div class="contact-info-icon" aria-hidden="true">📍</div>
+              <div>
+                <h4>Adresse</h4>
+                <p>33 Rue de l'Étain<br />77176 Savigny-Le-Temple<br />Île-de-France</p>
+              </div>
+            </div>
+
+            <!-- Disponibilité -->
+            <div class="contact-availability" role="region" aria-label="Horaires de disponibilité">
+              <h4>Disponibilité</h4>
+              <div class="contact-availability-item">
+                <span>Lundi – Vendredi</span>
+                <strong>8h – 18h</strong>
+              </div>
+              <div class="contact-availability-item">
+                <span>Samedi</span>
+                <strong>9h – 14h</strong>
+              </div>
+              <div class="contact-availability-item">
+                <span>Dimanche</span>
+                <strong>Sur RDV</strong>
+              </div>
+            </div>
+
+            <!-- Google Maps -->
+            <div class="map-contact" aria-label="Carte de localisation SLC Location">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2641.2!2d2.579!3d48.578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e5fca4b6e1c1a1%3A0x0!2s33+Rue+de+l'%C3%89tain%2C+77176+Savigny-le-Temple!5e0!3m2!1sfr!2sfr!4v1"
+                loading="lazy"
+                title="Localisation SLC Location sur Google Maps"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+
+          </div><!-- /.contact-info-card -->
+
+        </aside>
+
+      </div><!-- /.contact__grid -->
+    </div>
+  </main>
+
+  <!-- =============================================
+       FOOTER
+       ============================================= -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+
+        <div class="footer__brand">
+          <a href="index.html" class="navbar__logo" aria-label="SLC Location">
+            <div class="navbar__logo-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+              </svg>
+            </div>
+            <span>SLC <span>Location</span></span>
+          </a>
+          <p>Votre partenaire de confiance pour la location de matériel et véhicules de chantier en Île-de-France. Matériel récent, réactif et professionnel.</p>
+        </div>
+
+        <div class="footer__col">
+          <h4>Navigation</h4>
+          <nav class="footer__links" aria-label="Navigation footer">
+            <a href="index.html#accueil">Accueil</a>
+            <a href="index.html#apropos">À propos</a>
+            <a href="index.html#equipements">Nos équipements</a>
+            <a href="index.html#fonctionnement">Fonctionnement</a>
+            <a href="index.html#avis">Avis clients</a>
+            <a href="contact.html">Contact</a>
+          </nav>
+        </div>
+
+        <div class="footer__col">
+          <h4>Équipements</h4>
+          <div class="footer__links">
+            <a href="index.html#equipements">Mini-Pelle</a>
+            <a href="index.html#equipements">Nacelle + Stabilisateur</a>
+            <a href="index.html#equipements">Citroën Jumpy 9 Pl.</a>
+            <a href="index.html#equipements">Nacelle</a>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h4>Contact</h4>
+          <div class="footer__contact-item">
+            <div class="footer__contact-icon" aria-hidden="true">📞</div>
+            <p>
+              <strong>Téléphone</strong>
+              <a href="tel:+33613391995">+33 6 13 39 19 95</a><br />
+              <a href="tel:+33601171062">+33 6 01 17 10 62</a>
+            </p>
+          </div>
+          <div class="footer__contact-item">
+            <div class="footer__contact-icon" aria-hidden="true">✉️</div>
+            <p>
+              <strong>Email</strong>
+              <a href="mailto:slclocation.77@gmail.com">slclocation.77@gmail.com</a>
+            </p>
+          </div>
+          <div class="footer__contact-item">
+            <div class="footer__contact-icon" aria-hidden="true">📍</div>
+            <p>
+              <strong>Adresse</strong>
+              33 Rue de l'Étain<br />
+              77176 Savigny-Le-Temple
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom">
+        <p>© <span class="footer-year">2024</span> <span>SLC Location</span>. Tous droits réservés.</p>
+        <p>33 Rue de l'Étain — 77176 Savigny-Le-Temple</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script -->
+  <script src="script.js" defer></script>
+</body>
+</html>

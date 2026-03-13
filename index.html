@@ -63,18 +63,29 @@
     </ul>
 
     <!-- Hamburger -->
-    <button class="navbar__hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
+    <button
+      id="hamburger-btn"
+      class="navbar__hamburger"
+      aria-label="Ouvrir le menu"
+      onclick="
+        var menu = document.getElementById('mobile-menu');
+        var btn = document.getElementById('hamburger-btn');
+        var isOpen = menu.classList.toggle('open');
+        btn.classList.toggle('active', isOpen);
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+      "
+    >
       <span></span><span></span><span></span>
     </button>
   </nav>
 
   <!-- Mobile Menu -->
-  <div class="navbar__mobile" role="navigation" aria-label="Menu mobile">
-    <a href="#accueil">Accueil</a>
-    <a href="#apropos">À propos</a>
-    <a href="#equipements">Nos équipements</a>
-    <a href="#fonctionnement">Fonctionnement</a>
-    <a href="#avis">Avis clients</a>
+  <div id="mobile-menu" class="navbar__mobile" role="navigation" aria-label="Menu mobile">
+    <a href="#accueil"        onclick="document.getElementById('mobile-menu').classList.remove('open');document.getElementById('hamburger-btn').classList.remove('active');document.body.style.overflow='';">Accueil</a>
+    <a href="#apropos"        onclick="document.getElementById('mobile-menu').classList.remove('open');document.getElementById('hamburger-btn').classList.remove('active');document.body.style.overflow='';">À propos</a>
+    <a href="#equipements"    onclick="document.getElementById('mobile-menu').classList.remove('open');document.getElementById('hamburger-btn').classList.remove('active');document.body.style.overflow='';">Nos équipements</a>
+    <a href="#fonctionnement" onclick="document.getElementById('mobile-menu').classList.remove('open');document.getElementById('hamburger-btn').classList.remove('active');document.body.style.overflow='';">Fonctionnement</a>
+    <a href="#avis"           onclick="document.getElementById('mobile-menu').classList.remove('open');document.getElementById('hamburger-btn').classList.remove('active');document.body.style.overflow='';">Avis clients</a>
     <a href="contact.html">Contact</a>
     <a href="contact.html" class="btn-devis">Demander un devis</a>
   </div>
@@ -119,7 +130,7 @@
     <!-- Stats (desktop) -->
     <div class="hero__stats" aria-label="Chiffres clés" role="list">
       <div class="hero__stat" role="listitem">
-        <div class="hero__stat-num"><span data-count="4">4</span> équipements</div>
+        <div class="hero__stat-num"><span data-count="4">0</span> équipements</div>
         <div class="hero__stat-label">Disponibles</div>
       </div>
       <div class="hero__stat" role="listitem">
@@ -459,7 +470,7 @@
        ============================================= -->
   <section id="cta-final" aria-labelledby="cta-title">
     <div class="cta-final__content reveal">
-      <div class="section-tag" style="background:rgba(0,0,0,0.12);border-color:rgba(0,0,0,0.2);color:rgba(0,0,0,0.6);">Et... Action !</div>
+      <div class="section-tag" style="background:rgba(0,0,0,0.12);border-color:rgba(0,0,0,0.2);color:rgba(0,0,0,0.6);">Action</div>
       <h2 class="cta-final__title" id="cta-title">Réservez dès maintenant<br />ce dont vous avez besoin !</h2>
       <p class="cta-final__text">Prêt à passer à l'action ?</p>
       <a href="contact.html" class="btn-dark">
@@ -555,7 +566,7 @@
           <!-- Google Maps embed -->
           <div class="footer__map" aria-label="Localisation SLC Location sur la carte">
             <iframe
-              src="https://maps.app.goo.gl/ZNqxKi7kDies3m4n7"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2641.2!2d2.579!3d48.578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e5fca4b6e1c1a1%3A0x0!2s33+Rue+de+l'%C3%89tain%2C+77176+Savigny-le-Temple!5e0!3m2!1sfr!2sfr!4v1"
               loading="lazy"
               title="Localisation SLC Location - 33 Rue de l'Étain, 77176 Savigny-Le-Temple"
               referrerpolicy="no-referrer-when-downgrade"

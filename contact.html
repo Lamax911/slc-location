@@ -62,13 +62,24 @@
     </ul>
 
     <!-- Hamburger -->
-    <button class="navbar__hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
+    <button
+      id="hamburger-btn"
+      class="navbar__hamburger"
+      aria-label="Ouvrir le menu"
+      onclick="
+        var menu = document.getElementById('mobile-menu');
+        var btn = document.getElementById('hamburger-btn');
+        var isOpen = menu.classList.toggle('open');
+        btn.classList.toggle('active', isOpen);
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+      "
+    >
       <span></span><span></span><span></span>
     </button>
   </nav>
 
   <!-- Mobile Menu -->
-  <div class="navbar__mobile" role="navigation" aria-label="Menu mobile">
+  <div id="mobile-menu" class="navbar__mobile" role="navigation" aria-label="Menu mobile">
     <a href="index.html#accueil">Accueil</a>
     <a href="index.html#apropos">À propos</a>
     <a href="index.html#equipements">Nos équipements</a>
@@ -106,11 +117,11 @@
 
             <!--
               FORMSPREE : Remplacez ACTION par votre endpoint Formspree
-              Ex: https://formspree.io/f/xvzwrjgv
+              Ex: https://formspree.io/f/VOTRE_ID
             -->
             <form
               id="contact-form"
-              action="https://formspree.io/f/xvzwrjgv"
+              action="https://formspree.io/f/YOUR_FORM_ID"
               method="POST"
               novalidate
               aria-label="Formulaire de contact SLC Location"

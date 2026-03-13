@@ -158,9 +158,15 @@ ul { list-style: none; }
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
-  padding: 6px;
+  padding: 10px;
   background: none;
   border: none;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
 }
 
 .navbar__hamburger span {
@@ -184,18 +190,12 @@ ul { list-style: none; }
   flex-direction: column;
   gap: 1rem;
   border-top: 2px solid var(--yellow);
-  z-index: 999;
-  display: flex;
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 9999;
+  display: none;
 }
 
 .navbar__mobile.open {
-  visibility: visible;
-  opacity: 1;
-  pointer-events: all;
+  display: flex;
 }
 
 .navbar__mobile a {
